@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>IE11 iframe</title>
+    <script>
+        function openWindow() {
+    	 	var iframe = document.createElement('iframe');
+    	   	
+    	   	iframe.src = 'page2.html'
+    	   	iframe.id = 'iframeid'
+    	   	
+    	   	document.body.appendChild(iframe);
+        }
+        
+        function closeWindow(){
+        	document.getElementById('iframeid').parentNode.removeChild(document.getElementById('iframeid'));
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="openWindow()">Open page2.html</button>
+
+    <br><br> A text input <input type="text" name="fname">
+    <br><br>
+    <textarea rows="4" cols="50">
+        A textarea.  This is a sentence.
+        </textarea>
+    <br><br>
+
+    <button onclick="closeWindow()">Close page2.html</button>
+</body>
+
+</html>
