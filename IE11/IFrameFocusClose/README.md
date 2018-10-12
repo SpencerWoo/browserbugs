@@ -10,6 +10,8 @@ https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/872182/
 
 **Steps To Reproduce :** 
 
+Using Windows 10
+
 Using IE11
 
  1. Open page1.html.  Can type text in input or textarea
