@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<style>
+			.standard {
+				transition: all 1s ease-in-out;
+				transform: rotate(45deg);
+				width:50px;  height:50px;  border:1px solid black;  background-color:green;   margin:3em;
+			}
+
+			button + .standard {
+				transform: rotate(30deg);
+			}
+
+			/*button.on + .standard {
+				transform:rotate(0deg);
+			}*/
+
+			/* REMOVE THE FOLLOWING COMMENTS to see issue on page load using IE11 - make sure window is larger than 800 pixels */
+			@media only screen and (max-width:800px) {
+				button.on + .standard {
+					background-color:red;
+					transform:rotate(270deg);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<button class="on" onclick="this.classList.toggle('on');">Rotate Test</button>
+		<div class="standard">&nbsp;</div>
+	</body>
+</html>

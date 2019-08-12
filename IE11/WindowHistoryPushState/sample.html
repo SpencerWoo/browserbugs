@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>                
+        <title>Favicon test</title>
+        <link rel="shortcut icon" href="https://en.wikipedia.org/favicon.ico">
+        <script type="text/javascript">
+         function changeState(){
+             var time = new Date().getTime();
+             var someState = {param: time};
+             window.history.pushState(someState, 'foobar', '?foo='+ time);
+         };
+        </script>
+    </head>
+    <body>
+        <button onClick="changeState()">push state information</a><br/>
+    </body>
+</html>
